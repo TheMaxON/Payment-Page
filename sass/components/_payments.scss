@@ -1,0 +1,329 @@
+.success {
+  color: var(--color-success);
+}
+
+.paymentsWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background-color-secondary);
+  padding: 41px 35px;
+  border-radius: 5px;
+
+  @media (max-width: 1450px) {
+    padding: 0;
+  }
+
+  &Heading {
+    margin-bottom: 22px;
+
+    @media (max-width: 1450px) {
+      display: none;
+    }
+  }
+}
+
+.paymentsFilter {
+  font-family: var(--text-font);
+  color: var(--text-color-primary);
+  font-size: 20px;
+  position: relative;
+
+  @media (max-width: 1450px) {
+    font-size: 14px;
+  }
+
+  &Heading {
+    font-weight: 600;
+  }
+
+  &Options {
+    background-color: transparent;
+    border: none;
+    font-family: var(--text-font);
+    color: var(--text-color-primary);
+    font-weight: 400;
+    margin-left: 7px;
+    cursor: pointer;
+    outline: none;
+    font-size: 20px;
+    position: relative;
+
+    @media (max-width: 1450px) {
+      font-size: 14px;
+    }
+
+    & option {
+      background-color: var(--background-color-accent);
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.transactions {
+  width: 1300px;
+  height: 85vh;
+  min-height: 795px;
+  background-color: var(--background-color-accent);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  @media (max-width: 1450px) {
+    width: 100%;
+    height: 95vh;
+  }
+
+  &Header {
+    width: 100%;
+    background-color: var(--background-color-accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 25px 35px;
+
+    @media (max-width: 1450px) {
+      padding: 18px 22px;
+    }
+
+    &Desktop {
+      @media (max-width: 1450px) {
+        display: none;
+      }
+    }
+
+    &Mobile {
+      display: none;
+
+      @media (max-width: 1450px) {
+        display: block;
+      }
+    }
+  }
+
+  &Wrapper {
+    width: 100%;
+    max-height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: var(--background-color-accent);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #c6f5f3;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #ffffff;
+    }
+
+    @media (max-width: 1450px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+      gap: 10px;
+    }
+  }
+
+  &CategoriesHeader,
+  &Payment {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: var(--text-font);
+    color: var(--text-color-primary);
+
+    @media (max-width: 1450px) {
+      gap: 12px;
+    }
+  }
+
+  &CategoriesHeader {
+    padding: 20px 10px 20px 35px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color-secondary);
+
+    @media (max-width: 1450px) {
+      display: none;
+    }
+
+    &Photos {
+      width: 200px;
+    }
+
+    &Job {
+      width: 120px;
+    }
+
+    &Details {
+      width: 300px;
+    }
+
+    &Date {
+      width: 130px;
+    }
+
+    &Status {
+      width: 100px;
+    }
+
+    &Amount {
+      width: 120px;
+    }
+
+    &Actions {
+      width: 200px;
+    }
+  }
+
+  &Payment {
+    padding: 13px 10px 13px 35px;
+    background-color: var(--background-color-accent);
+    font-size: 14px;
+    font-weight: 600;
+
+    @media (max-width: 1450px) {
+      width: 345px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin: 3px auto 0;
+      padding: 11px 22px;
+      border-radius: 4px;
+      background-color: var(--background-color-secondary);
+    }
+
+    &:nth-child(even) {
+      background-color: var(--background-color-secondary);
+    }
+
+    &Photos {
+      width: 200px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 13px;
+
+      @media (max-width: 1450px) {
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      & img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    &Job {
+      width: 120px;
+
+      @media (max-width: 1450px) {
+        font-size: 14px;
+      }
+    }
+
+    &Details {
+      width: 300px;
+
+      @media (max-width: 1450px) {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+
+    &Info {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &Date {
+      width: 130px;
+
+      @media (max-width: 1450px) {
+        font-size: 12px;
+      }
+    }
+
+    &Status {
+      width: 100px;
+
+      @media (max-width: 1450px) {
+        font-size: 14px;
+      }
+    }
+
+    &Amount {
+      width: 120px;
+
+      @media (max-width: 1450px) {
+        font-size: 14px;
+      }
+    }
+
+    &Actions {
+      width: 200px;
+      display: flex;
+      flex-direction: row;
+      gap: 13px;
+
+      &Pay {
+        width: 102px;
+        height: 47px;
+        padding: 1px;
+        background: rgb(158, 200, 197);
+        background: linear-gradient(
+          90deg,
+          rgba(158, 200, 197, 1) 0%,
+          rgba(255, 239, 136, 1) 100%
+        );
+        border-radius: 6px;
+
+        &Icon {
+          width: 17px;
+          height: 17px;
+        }
+      }
+
+      &Details {
+        width: 102px;
+        height: 47px;
+        padding: 1px;
+        background: #c6f5f3;
+        border-radius: 6px;
+
+        &Icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      & button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
+        background-color: var(--background-color-accent);
+        font-family: var(--text-font);
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--text-color-primary);
+        border-radius: 5px;
+        padding: 14px 25px;
+
+        @media (max-width: 1450px) {
+          font-size: 12px;
+          padding: 11px 18px;
+        }
+      }
+    }
+  }
+}
